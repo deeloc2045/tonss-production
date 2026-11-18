@@ -1,0 +1,27 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Dépendances et builds
+node_modules/
+.next/
+out/
+dist/
+
+# Variables d'environnement et secrets
+.env
+.env*.local
+*.pem
+
+node_modules/
+.next/
+out/
+dist/
+.env
+.env*.local
+*.pem

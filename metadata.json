@@ -1,0 +1,6 @@
+{
+  "name": "TONSS Production",
+  "description": "Studio média hybride au Sénégal : création audiovisuelle, cinéma, solutions logicielles et applications innovantes (Waaxtu) basées à Dakar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

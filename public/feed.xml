@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TONSS Production - Journal &amp; Innovations</title>
+    <link>https://tonssproduction.com</link>
+    <description>Studio Média Hybride &amp; Innovation Numérique à Dakar, Sénégal. Coulisses du cinéma, étalonnage 4K, sound design et architecture tech.</description>
+    <language>fr-FR</language>
+    <lastBuildDate>Fri, 26 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://tonssproduction.com/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Les coulisses de l'étalonnage 4K : Donner vie aux teintes de Dakar sur grand écran</title>
+      <link>https://tonssproduction.com/cinema-longs-metrages</link>
+      <guid>https://tonssproduction.com/cinema-longs-metrages</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <author>contact@tonssproduction.com (Papa Demba)</author>
+      <category>Cinéma &amp; Tournage</category>
+      <description>Comment notre équipe capture et sublime la lumière dorée de l’Atlantique et l’effervescence des rues dakaroises lors du mastering final.</description>
+    </item>
+
+    <item>
+      <title>Architecture WebAssembly &amp; Flutter : Comment nous propulsons Waaxtu au-delà des limites</title>
+      <link>https://tonssproduction.com/developpement-applications</link>
+      <guid>https://tonssproduction.com/developpement-applications</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+      <author>contact@tonssproduction.com (Oumar Sall)</author>
+      <category>Innovation &amp; Tech</category>
+      <description>Plongée technique dans la conception de notre plateforme de streaming multimédia ultra-rapide optimisée pour les connexions mobiles.</description>
+    </item>
+
+    <item>
+      <title>Sound Design &amp; Immersion Audio 3D : Revivre l'ambiance sonore de Dakar</title>
+      <link>https://tonssproduction.com/post-production</link>
+      <guid>https://tonssproduction.com/post-production</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <author>contact@tonssproduction.com (Cheikh Tidiane)</author>
+      <category>Son &amp; Post-Production</category>
+      <description>Le son binaural et la captation de terrain au cœur des marchés et des plages pour une immersion totale dans nos fictions.</description>
+    </item>
+
+    <item>
+      <title>Derrière la caméra : Les secrets de tournage de nos documentaires culturels</title>
+      <link>https://tonssproduction.com/#blog</link>
+      <guid>https://tonssproduction.com/#blog-derriere-camera-secrets-tournage-documentaires</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+      <author>contact@tonssproduction.com (Aminata Traoré)</author>
+      <category>Coulisses &amp; Culture</category>
+      <description>Rencontres avec les sages, respect des traditions et agilité logistique sur le terrain : le quotidien de nos équipes de tournage.</description>
+    </item>
+  </channel>
+</rss>

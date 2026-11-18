@@ -1,0 +1,152 @@
+{
+  "__version": "1.0.0",
+  "collections": {
+    "contacts": {
+      "__description": "Messages submitted via the contact form",
+      "__schema": {
+        "name": "string",
+        "email": "string",
+        "phone": "string (optional)",
+        "service": "string",
+        "budget": "string (optional)",
+        "message": "string (optional)",
+        "createdAt": "timestamp"
+      },
+      "__security": {
+        "read": "isAdmin()",
+        "create": "true",
+        "update": "false",
+        "delete": "false"
+      }
+    },
+    "projects": {
+      "__description": "Studio projects, films, apps and media items",
+      "__schema": {
+        "title": "string",
+        "category": "string",
+        "categoryLabel": "string (optional)",
+        "badge": "string (optional)",
+        "year": "string (optional)",
+        "shortDesc": "string (optional)",
+        "fullDesc": "string (optional)",
+        "client": "string (optional)",
+        "image": "string (optional)",
+        "bannerImage": "string (optional)",
+        "trailerVideoUrl": "string (optional)",
+        "appDownloadUrl": "string (optional)",
+        "appPlatform": "string (optional)",
+        "rating": "string (optional)",
+        "duration": "string (optional)",
+        "techStack": "array (optional)",
+        "directorOrLead": "string (optional)",
+        "impactMetric": "string (optional)",
+        "gridType": "string (optional)",
+        "createdAt": "timestamp"
+      },
+      "__security": {
+        "read": "true",
+        "create": "isAdmin()",
+        "update": "isAdmin()",
+        "delete": "isAdmin()"
+      }
+    },
+    "kpis": {
+      "__description": "Key performance indicators and metrics displayed on the site",
+      "__schema": {
+        "value": "string",
+        "numberValue": "number (optional)",
+        "suffix": "string (optional)",
+        "label": "string",
+        "subtext": "string",
+        "iconName": "string",
+        "trend": "string (optional)",
+        "order": "number (optional)",
+        "createdAt": "timestamp"
+      },
+      "__security": {
+        "read": "true",
+        "create": "isAdmin()",
+        "update": "isAdmin()",
+        "delete": "isAdmin()"
+      }
+    },
+    "stories": {
+      "__description": "Client testimonials and success stories",
+      "__schema": {
+        "title": "string",
+        "client": "string",
+        "category": "string",
+        "result": "string",
+        "quote": "string",
+        "author": "string",
+        "role": "string",
+        "image": "string (optional)",
+        "order": "number (optional)",
+        "createdAt": "timestamp"
+      },
+      "__security": {
+        "read": "true",
+        "create": "isAdmin()",
+        "update": "isAdmin()",
+        "delete": "isAdmin()"
+      }
+    },
+    "values": {
+      "__description": "Studio values and cultural pillars",
+      "__schema": {
+        "icon": "string",
+        "title": "string",
+        "description": "string",
+        "order": "number (optional)",
+        "createdAt": "timestamp"
+      },
+      "__security": {
+        "read": "true",
+        "create": "isAdmin()",
+        "update": "isAdmin()",
+        "delete": "isAdmin()"
+      }
+    },
+    "site_settings": {
+      "__description": "Global website configuration, text content and contact info",
+      "__schema": {
+        "heroBadge": "string (optional)",
+        "heroTitle": "string (optional)",
+        "heroSubtitle": "string (optional)",
+        "heroShowreelUrl": "string (optional)",
+        "contactEmail": "string (optional)",
+        "contactPhone": "string (optional)",
+        "contactAddress": "string (optional)",
+        "whatsappNumber": "string (optional)",
+        "socialYoutube": "string (optional)",
+        "socialVimeo": "string (optional)",
+        "socialInstagram": "string (optional)",
+        "socialLinkedin": "string (optional)",
+        "socialGithub": "string (optional)",
+        "socialTwitter": "string (optional)",
+        "manifestoQuote": "string (optional)",
+        "updatedAt": "timestamp"
+      },
+      "__security": {
+        "read": "true",
+        "create": "isAdmin()",
+        "update": "isAdmin()",
+        "delete": "isAdmin()"
+      }
+    },
+    "users": {
+      "__description": "Studio members and administrators",
+      "__schema": {
+        "email": "string",
+        "role": "string",
+        "createdAt": "timestamp"
+      },
+      "__security": {
+        "read": "isAdmin() || (request.auth != null && request.auth.uid == document)",
+        "create": "request.auth != null && request.auth.uid == document",
+        "update": "request.auth != null && request.auth.uid == document",
+        "delete": "isAdmin()"
+      }
+    }
+  }
+}

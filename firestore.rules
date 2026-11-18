@@ -1,0 +1,78 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  
+    function isAdmin() {
+      return request.auth != null && (
+        request.auth.token.email == 'deeloc2045@gmail.com' ||
+        request.auth.token.email == 'deeloc2045agmail.com' ||
+        request.auth.uid == 'LTWL398RgHM7odWMbLA0y0aakGv1' ||
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin')
+      );
+    }
+  
+    match /contacts/{contactId} {
+      // Anyone can submit a contact form
+      allow create: if true;
+      // Only authenticated admins can read the messages
+      allow read: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+    
+    match /projects/{projectId} {
+      allow read: if true; // anyone can read projects
+      allow write: if isAdmin(); // only admins can create/update/delete
+    }
+
+    match /kpis/{kpiId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /stories/{storyId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /values/{valueId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /site_settings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /activity_logs/{logId} {
+      allow read: if isAdmin();
+      allow create: if request.auth != null;
+    }
+    
+    match /{path=**}/messages/{msgId} {
+      allow read: if isAdmin();
+    }
+    
+    match /conversations/{clientId}/messages/{msgId} {
+      allow read, create: if isAdmin() || (request.auth != null && clientId == request.auth.uid);
+    }
+    
+    match /clientProjects/{projectId} {
+      allow read: if isAdmin() || (request.auth != null && resource.data.clientId == request.auth.uid);
+      allow write: if isAdmin();
+    }
+    
+    match /clientFiles/{fileId} {
+      allow read: if isAdmin() || (request.auth != null && resource.data.clientId == request.auth.uid);
+      allow write: if isAdmin();
+    }
+
+    match /users/{userId} {
+      // Users can read and write their own profile, admins can read and manage all
+      allow read: if isAdmin() || (request.auth != null && request.auth.uid == userId);
+      allow create, update: if isAdmin() || (request.auth != null && request.auth.uid == userId);
+      allow delete: if isAdmin();
+    }
+  }
+}
+
